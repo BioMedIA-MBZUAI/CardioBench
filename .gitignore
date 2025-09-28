@@ -1,0 +1,7 @@
+embeddings/*
+embeddings
+
+
+# python cache
+__pycache__/
+*.pyc      
