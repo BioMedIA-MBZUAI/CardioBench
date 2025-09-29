@@ -1,7 +1,7 @@
 embeddings/*
 embeddings
 
-
+normalize_pred
 # python cache
 __pycache__/
 *.pyc      

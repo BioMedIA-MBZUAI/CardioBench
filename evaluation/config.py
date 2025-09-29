@@ -1,0 +1,78 @@
+# GENERAL
+B = 1000
+SEED = 42
+SPLIT = "test"
+VIEW_CLASS_NAMES = ["A2C", "A3C", "A4C", "PSAX", "PLAX", "Other"]
+
+
+# CAMUS
+CAMUS_SPLIT_CSV = ""
+CAMUS_EF_PRED_DIR = ""
+CAMUS_VIEW_PRED_DIR = ""
+CAMUS_OUTPUT_DIR = ""
+VIEW_MAP = {
+    "2CH": "A2C",
+    "4CH": "A4C",
+}
+
+
+# CARDIACNET
+ASD_GT = ""
+PAH_GT = ""
+PRED_ROOT = ""
+CARDIACNET_OUT_DIR = ""
+
+# ECHONET DYNAMIC
+EF_MODELS = {
+    "dinov3": "",  # path to dinov3 EF predictions CSV
+}
+
+VIEW_MODELS = {
+    "dinov3": "",  # path to dinov3 view predictions CSV
+}
+
+ECHONETDYNAMIC_OUT_DIR = ""
+
+GT_ECHONET_DYNAMIC = ""
+
+# HMC-QU
+HMCQU_CSV = ""
+VIEW_PRED_DIR = ""
+STEMI_PRED_DIR = ""
+HMCQU_OUT_DIR = ""
+
+# ECHONET LVH
+LVH_GT_FILES = {
+    "IVSd": "",
+    "LVIDd": "",
+    "LVPWd": "",
+}
+
+IVSd_ROOT = ""
+LVIDd_ROOT = ""
+LVPWd_ROOT = ""
+
+LVH_VIEW_ROOT = ""
+
+LVH_OUT_DIR = ""
+
+# PEDIATRIC
+PEDIATRIC_FILELIST_CSV = ""
+
+PEDIATRIC_EF_PRED_DIR = ""
+
+PEDIATRIC_VIEW_MODELS = {"dinov3": ""}
+
+# RWMA
+RWMA_GT = ""
+RWMA_PRED_DIR = ""
+RWMA_VIEW_PRED_DIR = ""
+RWMA_OUT_DIR = ""
+EVAL_MODALITIES = ["2D"]
+
+# TMED2
+TMED2_SPLIT_PER_IMAGE = ""
+TMED2_SPLIT_PER_STUDY = ""
+TMED2_VIEW_PRED_DIR = ""
+AS_PRED_DIR = ""
+TMED2_OUT_DIR = ""
