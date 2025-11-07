@@ -12,7 +12,7 @@ from utils import (
 from config import (
     TMED2_SPLIT_PER_IMAGE,
     TMED2_SPLIT_PER_STUDY,
-    VIEW_PRED_DIR,
+    TMED2_VIEW_PRED_DIR,
     AS_PRED_DIR,
     TMED2_OUT_DIR,
     VIEW_CLASS_NAMES,
@@ -106,7 +106,7 @@ view_rows = []
 confusion_rows = []
 VIEW_MODELS = {
     os.path.splitext(os.path.basename(p))[0]: p
-    for p in sorted(glob.glob(os.path.join(VIEW_PRED_DIR, "*.csv")))
+    for p in sorted(glob.glob(os.path.join(TMED2_VIEW_PRED_DIR, "*.csv")))
 }
 perview_rows = []
 for model_name, pred_path in sorted(VIEW_MODELS.items()):

@@ -5,3 +5,16 @@ normalize_pred
 # python cache
 __pycache__/
 *.pyc      
+# local workflow configuration
+configs/datasets.json
+configs/*.local.*
+
+# data
+data/raw/*
+data/splits/echonet_lvh
+data/splits/camus_split.csv
+data/splits/echonet_pediatric_filelist.csv
+
+# eval
+evaluation/output
+evaluation/embeddings

@@ -17,6 +17,7 @@ from config import (
     PEDIATRIC_FILELIST_CSV,
     PEDIATRIC_EF_PRED_DIR,
     PEDIATRIC_OUT_DIR,
+    PEDIATRIC_VIEW_MODELS,
 )
 
 EF_MODELS = {
@@ -175,7 +176,7 @@ view_rows, view_group_rows, confusion_rows = [], [], []
 view_to_idx = {c: i for i, c in enumerate(VIEW_CLASS_NAMES)}
 perview_rows = []
 
-for model_name, pred_path in VIEW_MODELS.items():
+for model_name, pred_path in PEDIATRIC_VIEW_MODELS.items():
     # ------------------- SANITY CHECKS -------------------
     if not os.path.exists(pred_path):
         print(f"[WARN] missing view preds for {model_name}")

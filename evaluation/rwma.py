@@ -8,7 +8,7 @@ from config import (
     VIEW_CLASS_NAMES,
     RWMA_GT,
     RWMA_PRED_DIR,
-    VIEW_PRED_DIR,
+    RWMA_VIEW_PRED_DIR,
     EVAL_MODALITIES,
     RWMA_OUT_DIR,
     EVAL_MODALITIES,
@@ -82,7 +82,7 @@ perview_rows = []
 VIEW_CLASS_NAMES = ["A2C", "A3C", "A4C", "PSAX", "PLAX", "Other"]
 VIEW_MODELS = {
     os.path.splitext(os.path.basename(p))[0]: p
-    for p in sorted(glob.glob(os.path.join(VIEW_PRED_DIR, "*.csv")))
+    for p in sorted(glob.glob(os.path.join(RWMA_VIEW_PRED_DIR, "*.csv")))
 }
 
 for model_name, pred_path in sorted(VIEW_MODELS.items()):

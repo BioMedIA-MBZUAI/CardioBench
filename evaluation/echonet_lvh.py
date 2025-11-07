@@ -34,6 +34,7 @@ REG_MODELS = {
         if f.endswith(".csv")
     },
 }
+
 for target, gt_path in LVH_GT_FILES.items():
     # ------------------- SANITY CHECKS -------------------
     if not os.path.exists(gt_path):
@@ -42,6 +43,7 @@ for target, gt_path in LVH_GT_FILES.items():
 
     gt = pd.read_csv(gt_path)
     gt = gt[gt["split"] == SPLIT]
+    gt = gt.drop_duplicates(subset=["HashedFileName"], keep="first")  # !!!
     if "HashedFileName" not in gt.columns:
         raise ValueError(f"{gt_path} must have column: HashedFileName")
 
@@ -103,6 +105,7 @@ VIEW_MODELS = {
 }
 gt = pd.read_csv(gt_path)
 gt = gt[gt["split"] == SPLIT]
+gt = gt.drop_duplicates(subset=["HashedFileName"], keep="first")
 for model_name, pred_path in VIEW_MODELS.items():
     # ------------------- SANITY CHECKS -------------------
     if not os.path.exists(pred_path):
